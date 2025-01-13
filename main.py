@@ -53,7 +53,7 @@ if st.session_state["input"]:
             try:
                 # 调用 `qa_agent` 获取答案
                 response = qa_agent(openai_api_key= openai_api_key, memory= st.session_state["memory"],
-                                    uploaded_file= uploaded_file,question= question)
+                                    uploaded_file= uploaded_file,question= question + "（你好，请用中文回答我的问题,如果你觉得这不是一个问题请回应”请具体描述你的问题“）" )
                 # 将 AI 回复加入对话历史
                 st.session_state["memorys"].append({"role": "ai", "content": response["answer"]})
                 st.chat_message("ai").write(response["answer"])
