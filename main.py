@@ -57,6 +57,9 @@ if st.session_state["input"]:
                 # 将 AI 回复加入对话历史
                 st.session_state["memorys"].append({"role": "ai", "content": response["answer"]})
                 st.chat_message("ai").write(response["answer"])
+                                with st.expander("点击展开原文片段"):
+                    for doc in response["source_documents"]:
+                        st.write(doc.page_content)
             except Exception as e:
                 st.error(f"AI处理错误：{str(e)}")
 
