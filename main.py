@@ -36,7 +36,7 @@ st.session_state["input"] = st.chat_input()
 
 
 if st.session_state["input"]:
-    question ="（你好，请用中文回答我接下来的问题）" + st.session_state["input"]
+    question ="st.session_state["input"]
 
     if not openai_api_key:
         st.info("请输入你的api秘钥")
