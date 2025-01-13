@@ -32,7 +32,7 @@ for content in st.session_state["memorys"]:
 if "input" not in st.session_state:
     st.session_state["input"] = ""  # 初始化输入框状态
 
-st.session_state["input"] ="（你好，请用中文回答我接下来的问题）" st.chat_input()
+st.session_state["input"] ="（你好，请用中文回答我接下来的问题）"+ st.chat_input()
 
 
 if st.session_state["input"]:
