@@ -32,7 +32,7 @@ def qa_agent(openai_api_key, memory, uploaded_file, question):
     texts = splitter.split_documents(doc)
 
     # 生成向量数据库
-    embedding_model = OpenAIEmbeddings()
+    embedding_model = OpenAIEmbeddings(openai_api_key=openai_api_key)
     db = FAISS.from_documents(texts, embedding_model)
     retriever = db.as_retriever()
 
