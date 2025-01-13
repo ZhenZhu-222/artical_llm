@@ -41,7 +41,9 @@ def qa_agent(openai_api_key, memory, uploaded_file, question):
         llm=model,
         memory=memory,
         retriever=retriever,
-        chain_type="refine"
+        chain_type="refine",
+        chain_type="refine",
+        return_source_documents = True
     )
 
     # 执行查询
