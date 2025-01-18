@@ -103,30 +103,4 @@ def deteframe_agent(open_ai_key, memorys, question):
 
     return response
 
-#
-# if __name__ == '__main__':
-#     # Initialize memory for conversation
-#     ragtool.memory = ConversationBufferMemory(
-#         return_message=True,
-#         memory_key="chat_history",
-#         output_key="answer"
-#     )
-#     memorys = ConversationBufferMemory(
-#         memory_key='chat_history',
-#         return_messages=True
-#     )
-#     # Define your OpenAI API key
-#     ragtool.api = open_ai_key = "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"
-#
-#     # Path to your uploaded PDF file
-#     file = "D:\A1Project-code\pdf加大模型\电子舱装配工艺手册.pdf"
-#     ragtool.uploaded_file= file
-#     # Define your question
-#     question = "聂阳？"
-#
-#     # Call the deteframe_agent function
-#     response = deteframe_agent(open_ai_key=open_ai_key, memory=ragtool.memory, memorys=memorys, uploaded_file=file,
-#                                question=question)
-#
-#     # Print the response
-#     print(response)
+
